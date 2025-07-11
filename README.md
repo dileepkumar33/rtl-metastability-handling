@@ -1,43 +1,70 @@
-# rtl-metastability-handling
-Verilog implementation of an RTL-level metastability handling circuit using synchronizer design to ensure reliable data transfer across clock domains.
-# RTL-Based Metastability Handling Circuit
+# 🧠 RTL Metastability Handling Circuit
 
-This repository contains the Verilog implementation of a Register Transfer Level (RTL)-based circuit to safely handle metastability during asynchronous clock domain crossings.
+**Verilog implementation of an RTL-level synchronizer circuit to ensure reliable data transfer across asynchronous clock domains.**
 
-#📌 Project Summary
-Metastability is a major reliability concern in multi-clock digital systems. This project implements a robust RTL-level synchronizer using a multi-flip-flop architecture to mitigate timing violations and data corruption.
+---
 
-#⚙ Features
-- Two-stage and three-stage flip-flop synchronizers
-- Clock domain crossing (CDC) handling
-- Optional debounce and reset logic
-- Functional simulation using Synopsys VCS / EDA Playground
-- MTBF analysis and resource evaluation
+## 📌 Project Summary
 
-#🛠 Tools & Technologies
-- Language:Verilog
-- Simulation:Synopsys VCS, EDA Playground  
-- Target:FPGA/ASIC  
-- EDA Tools:Synopsys Design Compiler  
+Metastability is a critical issue in digital systems with multiple clock domains. This project presents an RTL-based design using multi-stage flip-flop synchronizers to mitigate metastability effects and ensure signal stability during clock domain crossing (CDC).
 
-#📁 Project Files
-- synchronizer.v: RTL design of synchronizer  
-- tb_synchronizer.v: Testbench for verification  
-- waveform_output.png: Output waveform showing signal stabilization  
-- README.md: Project overview  
+---
 
-#📊 Results
-- Stable synchronized output across clock domains  
-- Minimal resource utilization  
-- MTBF improved by multi-stage synchronization  
-- Suitable for FPGA and ASIC environments  
+## ⚙️ Features
 
-# 📚 References
-- Jan M. Rabaey, Digital Integrated Circuits  
-- Samir Palnitkar, Verilog HDL  
-- IEEE CDC verification methodologies  
+- Two-stage and three-stage synchronizer architectures
+- Clock domain crossing signal protection
+- Optional asynchronous reset and debounce logic
+- Simulatable on industry tools (Synopsys VCS / EDA Playground)
+- MTBF (Mean Time Between Failures) evaluation
 
-# 🚀 Future Enhancements
-- Hardware implementation on FPGA  
-- Adaptive synchronizer logic  
-- Formal verification and Gray-coded multi-bit data handling
+---
+
+## 🛠 Tools & Technologies
+
+- **Language:** Verilog HDL  
+- **Simulation Tools:** Synopsys VCS, EDA Playground  
+- **Target Platform:** FPGA / ASIC  
+- **EDA Tools:** Synopsys Design Compiler (optional for synthesis)
+
+---
+
+## 📁 Project Structure
+
+| File                | Description                                |
+|---------------------|--------------------------------------------|
+| `synchronizer.v`    | RTL design of the synchronizer module      |
+| `tb_synchronizer.v` | Testbench for functional verification      |
+| `waveform_output.png` | Optional simulation waveform image       |
+| `README.md`         | Project overview and documentation         |
+
+---
+
+## 📊 Results
+
+- Successfully synchronized asynchronous signals across clock domains
+- Minimal flip-flop resource usage
+- Improved reliability and MTBF through multi-stage synchronization
+- Ready for integration in larger CDC designs
+
+---
+
+## 📚 References
+
+- Jan M. Rabaey — *Digital Integrated Circuits*  
+- Samir Palnitkar — *Verilog HDL*  
+- IEEE papers on CDC verification methodologies
+
+---
+
+## 🚀 Future Enhancements
+
+- FPGA-based hardware implementation
+- Gray-coded multi-bit synchronizers
+- Integration of formal verification techniques
+
+---
+
+## 👨‍💻 Author
+
+**Dileep Kumar M**  
